@@ -1,0 +1,49 @@
+<!--
+    Name: Truong-Thinh Huynh SID: 01981340
+    GitHub Username: TruongHuynh01981340
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="tableStyle.css" rel="stylesheet">
+</head>
+<body>
+    <div id="formDiv">
+        <!-- Form that required four numberic valid input before being able to generate a multiplication table. -->
+        <form id="mulForm">
+            <h3>Please enter the table ranges</h3>
+    
+            <!-- Input is expecting numberic but will accept text that will be validated through a function. 
+                The function will update the corresponding span to instruct the user whether their input is valid or invalid. 
+                inputValidation will only be triggered if the user writes sommething in the input. 
+                https://www.w3schools.com/html/html_tables.asp -->
+            <label for="minColVal">Minimum Column Value (between -50 to 50)</label><br>
+            <input type="text" id="minColVal" name="minColVal"><br>
+            <span id="minColValErrorMsg"></span><br>
+
+            <label for="maxColVal">Maximum Column Value (between -50 to 50)</label><br>
+            <input type="text" id="maxColVal" name="maxColVal"><br>
+            <span id="maxColValErrorMsg"></span><br>
+
+            <label for="minRowVal">Minimum Row Value (between -50 to 50)</label><br>
+            <input type="text" id="minRowVal" name="minRowVal"><br>
+            <span id="minRowValErrorMsg"></span><br>
+
+            <label for="maxRowVal">Maximum Row Value (between -50 to 50)</label><br>
+            <input type="text" id="maxRowVal" name="maxRowVal"><br>
+            <span id="maxRowValErrorMsg"></span><br>
+            
+            <!-- Submit will only be triggered if the user hit the submit button. -->
+            <input type="submit" value="Regenerate Table">
+        </form>
+    </div>
+    <br><br>
+    <!-- This div is saved for the generated table as it will be utilized for scrollable table. -->
+    <div id="tableDiv"></div> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="tableValidation.js"></script>
+</body>
+</html>
